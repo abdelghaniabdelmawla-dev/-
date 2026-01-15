@@ -1,76 +1,146 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<style>
-body {
-background-color:#6ECCFF;
-
-}
-
-
-</style>
-
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ملفي الشخصي - [اسمك]</title>
-    
- 
- 
- 
-    
-    
-    
-    
+    <title>متجر لاعبي كرة القدم</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .player-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .player-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .player-card h3 {
+            margin: 10px 0;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0b65c2;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-    <center>
-        <h1>    عبدالغني عبدالمولي سليمان</h1>
-        <h2>مطور ويب ومصمم واجهات</h2>
-        
-        <center/>
-    </header>
-<center>
-    <section id="about">
-        
-        <h2>نبذة عني</h2>
-        
-        <img src="IMG20251021132117.jpg" alt="image test" width="200" height="200">
-        
-        <p>متحمس للتكنولوجيا، أعمل على بناء حلول ويب مبتكرة باستخدام HTML, CSS, JavaScript. هدفي هو تحويل الأفكار إلى واجهات مستخدم تفاعلية.</p>
-    </section>
+<header>
+    <h1>⚽ متجر بيع لاعبي كرة القدم</h1>
+    <h1>اعداد الطالب عبدالغني عبدالمولي </h1>
+    <p>اختر لاعبك المفضل حسب القيمة السوقية</p>
+</header>
 
-    <section id="skills">
-        <h2>مهاراتي</h2>
-        <ul>
-            <li>HTML5 & CSS3</li>
-            <li>JavaScript (ES6+)</li>
-            <li>Responsive Design</li>
-            <li>{Link: Git & GitHub https://github.com/barmej/HTML-CSS-Crash-Course-Project}</li>
-        </ul>
-    </section>
+<div class="container">
 
-    <section id="projects">
-        <h2>مشاريعي</h2>
-        <article>
-            <h3>مشروع 1: موقع تجارة إلكترونية  وتسوق </h3>
-            <p>تطبيق متكامل للتجارة الإلكترونية مع نظام سلة تسوق.</p>
-            <a href="project1.html">عرض المشروع</a>
-        </article>
-        <article>
-            <h3>مشروع 2: مدونة شخصية</h3>
-            <p>مدونة بتصميم عصري لعرض المقالات التقنية.</p>
-            <a href="project2.html">عرض المشروع</a>
-        </article>
-    </section>
+    <div class="player-card">
+        <img src="12345.jpeg"  height="300">
+        <h3>ليونيل ميسي</h3>
+        <p>المركز: جناح</p>
+        <p class="price">💰 القيمة السوقية: 35 مليون €</p>
+        <button onclick="buyPlayer('ليونيل ميسي')">شراء اللاعب</button>
+    </div>
 
-    <footer>
-        <p>تواصل معي: <a href="mailtole.com">abdelghaniabdelmawla@gmail.com</a></p>
-        <p>&copy; 2025 [اسمك]. جميع الحقوق محفوظة.</p>
-    </footer>
+    <div class="player-card">
+        <img src="12345678.png" alt="لاعب">
+        <h3>كريستيانو رونالدو</h3>
+        <p>المركز: مهاجم</p>
+        <p class="price">💰 القيمة السوقية: 20 مليون €</p>
+        <button onclick="buyPlayer('كريستيانو رونالدو')">شراء اللاعب</button>
+    </div>
+
+    <div class="player-card">
+        <img src="1234.jpeg" alt="لاعب">
+        <h3>كيليان مبابي</h3>
+        <p>المركز: مهاجم</p>
+        <p class="price">💰 القيمة السوقية: 180 مليون €</p>
+        <button onclick="buyPlayer('كيليان مبابي')">شراء اللاعب</button>
+    </div>
+    
+    <div class="player-card">
+        <img src="1234567.png" alt="لاعب كرة قدم">
+        <h2>إيرلينغ هالاند</h2>
+        <p>المركز: مهاجم صريح</p>
+        <p class="price">💰 القيمة السوقية: 170 مليون €</p>
+        <button onclick="buyPlayer('هالاند')">شراء</button>
+    </div>
+    
+    <div class="player-card">
+        <img src="123456.jpeg" >
+        <h2>نيمار جنيور</h2>
+        <p>المركز: مهاجم جناح</p>
+        <p class="price">💰 القيمه السوقيه"200 مليون €</p>
+        <button onclick="buyPlayer('هالاند')">شراء</button>
+    </div>
+    
+    
+    <div class="player-card">
+        <img src="123.jpeg" height="300">
+        <h2>لامين يمال</h2>
+        <p>المركز: مهاجم صريح</p>
+        <p class="price">💰 القيمة السوقية: 190 مليون €</p>
+        <button onclick="buyPlayer('هالاند')">شراء</button>
+    </div>
+    
+
+</div>
+
 
 
 </body>
-</html>
+</html>alert("تمت إضافة اللاعب " + playerName + " إلى سلة الشراء 🛒");
+    }
+</script>
+
+</body>
+</html>0t("تمت إضافة اللاعب " + playerName + " إلى سلة الشراء 🛒");
+    }
+</script>
+
+</body>
+</html>0cript>
+
+</body>
+</html>0
